@@ -2,9 +2,9 @@
 
 int pvjoueur = 150;
 int pvmonstre = 100;
-int atk = 20;
+int atk = 30;
 int atkmonstre = 15;
-
+int def = 30;
 
 
 
@@ -12,13 +12,10 @@ int main (void) {
 	printf("Un sanglier pas tres gentil vous barre la route !\n");
 	printf("Que faite vous ?\n");
 	
-	
 	scanf("%d", &atk);
+	
 
 		do {
-	
-			
-
 
 
 
@@ -36,30 +33,27 @@ int main (void) {
 
 					pvjoueur = pvjoueur - atkmonstre;
 
-					printf("Il vous reste %d PV\n", pvjoueur);
+							if (pvjoueur > 0) {
+							printf("Il vous reste %d PV\n", pvjoueur);
+							}
+							else {
+							printf("Il vous reste 0 PV\n");
+							printf("Vous etes mort...\n");
+							}
 
 				}
+				
 						else  {
 					printf("Il lui reste 0 PV\n");
+					printf("Le vilain sanglier est vaincu !\n");
 				}	
-
-			
-
-
-
-	} 	
+		
+		}
 
 		while (pvmonstre > 0);
-	
-	printf("Le vilain sanglier est vaincu !\n");
+		
 
 
-
-
-
-
-
-
-return 0;
+	return 0;
 
 }
