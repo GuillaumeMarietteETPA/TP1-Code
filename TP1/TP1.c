@@ -1,22 +1,29 @@
 #include <stdio.h>
 
-int pvjoueur = 150;
+int pvjoueur = 200;
 int pvmonstre = 100;
-int atk = 30;
-int atkmonstre = 100;
+int atk = 40;
+int atkmonstre = 30;
 int def = 0;
+int choix;
 
 
 
 int main (void) {
 	printf("Un sanglier pas tres gentil vous barre la route !\n");
-	printf("Que faite vous ?\n");
-	printf("atk - def\n");
-	
-		if (scanf("%d", &atk)); {
 
-			do {
+	
+		do {
 			
+				
+
+			printf("Que faite vous ?\n");
+			printf("Attaque[1] - Defense[2]\n");
+
+			scanf("%d", &choix);
+
+						if (choix==1) {
+
 
 
 				printf("Vous attaquer vaillament !\n");
@@ -49,28 +56,18 @@ int main (void) {
 					printf("Le vilain sanglier est vaincu !\n");
 					break;
 				}	
-		
-		}
 			
-
-
-
-		
-
-
-		while (pvmonstre > 0, pvjoueur > 0);
 		}
-		
-
-		
 
 
 
-
-		if (scanf("%d", &def)); {
+		if (choix==2) {
 				
-				do{
+			
 				
+				
+
+
 				printf("Vous brandisser votre bouclier !\n");
 				
 					def = atkmonstre / 4;
@@ -86,12 +83,14 @@ int main (void) {
 				printf("Vous etes mort...\n");
 				break;
 				}
-			}
-
-		while (pvmonstre > 0, pvjoueur > 0);
-
-
+			
+		}
 }
+		while ((pvmonstre > 0) && (pvjoueur > 0));
+		
+	
+
+
 
 	return 0;
 
