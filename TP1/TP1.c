@@ -84,6 +84,7 @@ int main (void) {
 				break;
 				}
 			
+			
 		}
 }
 		while ((pvmonstre > 0) && (pvjoueur > 0));
